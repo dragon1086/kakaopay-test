@@ -46,7 +46,7 @@
 1. 소스코드 다운로드
 
 	```
-	git clone https://
+	git clone https://github.com/junych/kakaopay-test.git
 	```
 
 	

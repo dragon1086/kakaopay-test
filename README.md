@@ -92,3 +92,24 @@
 #### 2) RESPONSE
 - TOKEN : STRING
 
+### 2. 받기API
+#### 1) REQEUST
+- METHOD : PUT
+- URL : /api/take/{token}
+- HEADER
+	- X-ROOM-ID : STRING
+	- X-USER-ID : LONG
+#### 2) RESPONSE
+- takeAmount : LONG
+
+### 3. 조회API
+#### 1) REQUEST
+- METHOD : GET
+- URL : /api/spread/{token}
+- HEADER
+	- X-ROOM-ID : STRING
+	- X-USER-ID : LONG
+#### 2) RESPONSE
+- takeAmount : LONG
+- receiverId : LONG
+

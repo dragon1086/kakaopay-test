@@ -49,19 +49,32 @@
 	git clone https://github.com/junych/kakaopay-test.git
 	```
 
-	
 2. 다운로드 폴더 이동 및 jar 파일 생성
 
 	```
 	cd kakaopay-test
-	```
-	```
 	mvn package
 	```
 	
 3. target 폴더로 이동 및 실행
 
 	```
+	cd target
 	java -jar moneyapi-0.0.1-SNAPSHOT.jar
 	```
+
+## 문제 해결 전략
+### 1. 뿌리기API
+- TOKEN 발급시 DB 조회를 통한 중복 체크 (동일한 ROOMID, TOKEN 존재여부 조회)
+- 뿌려진 금액은 정수로 설정된 인원에 맞게 미리 분배하여 DB 저장
+
+### 2. 받기API
+- 받을 TOKEN의 유효성 체크 (유효기간 안에 동일한 ROOMID, TOKEN 존재여부 조회)
+  ※ 유효기간은 상수로 처리하여 유연한 관리 가능
+- 미리 분배된 뿌리기 금액 중 할당되지 않은 하나를 선택하여 받기 처리
+
+### 3. 조회API
+- DB 조회를 통한 뿌리기 정보 조회 (유효기간 안에 동일한 ROODID, USERID, TOKEN 존재여부 조회)
+  ※ 유효기간은 상수로 처리하여 유연한 관리 가능
+
 

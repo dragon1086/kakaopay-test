@@ -45,19 +45,23 @@
 ## 실행방법
 1. 소스코드 다운로드
 
-    git clone https://
+	```
+	git clone https://
+	```
 
 	
 2. 다운로드 폴더 이동 및 jar 파일 생성
 
-    cd kakaopay-test
-
-
-    mvn package
-
+	```
+	cd kakaopay-test
+	```
+	```
+	mvn package
+	```
 	
 3. target 폴더로 이동 및 실행
 
-    java -jar moneyapi-0.0.1-SNAPSHOT.jar
-	
+	```
+	java -jar moneyapi-0.0.1-SNAPSHOT.jar
+	```
 

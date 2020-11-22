@@ -78,3 +78,17 @@
   ※ 유효기간은 상수로 처리하여 유연한 관리 가능
 
 
+## API 명세서
+### 1. 뿌리기API
+#### 1) REQUEST
+- METHOD : POST
+- URL : /api/spread
+- HEADER
+	- X-ROOM-ID : STRING
+	- X-USER-ID : LONG
+- BODY
+	- amount : LONG
+	- totalCnt : LONG
+#### 2) RESPONSE
+- TOKEN : STRING
+
